@@ -17,28 +17,27 @@ class UserCell: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var aboutLab: UILabel!
     
+    var Users: Users!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    /*func configureCell(user: Users, img: UIImage? = nil){
-        self.Users = user
+    func configureCell(users: Users, img: UIImage? = nil){
+        self.Users = users
         
         //get database information
         let userID = FIRAuth.auth()?.currentUser?.uid
-        likeRef = DataService.ds.REF_USERS.child(userID!).child("likes").child(social.socialKey)
-        flagRef = DataService.ds.REF_USERS.child(userID!).child("flags").child(social.socialKey)
         
-        self.socialTitle.text = social.title
-        self.socialDescription.text = social.description
+        self.usernameLab.text = users.username
+        print("Username" + users.username)
+        /*self.socialDescription.text = social.description
         self.socialCat.text = "Category: \(social.category)"
         
         let likecount = String(social.likes)
         self.socialLikeCount.text = "\(likecount) Likes"
-        
-        self.userName.text! = "Posted by: " + social.username
-        self.userLoc.text! = "Posted from: " + social.location
+ 
         
         if img != nil{
             self.socialImg.image = img
@@ -66,8 +65,8 @@ class UserCell: UITableViewCell {
             else{
                 self.socialImg.isHidden = true
             }
-        }
-    }*/
+        }*/
+    }
 
 
     override func setSelected(_ selected: Bool, animated: Bool) {

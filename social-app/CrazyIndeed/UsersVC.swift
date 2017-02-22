@@ -16,6 +16,8 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var users: UITableView!
     
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    
     var userList = [Users]()    //lists users
     var inde = 0
     
@@ -52,11 +54,11 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell{
-            /*if let img = UserVC.imageCache.object(forKey: social.imgUrl as NSString){
-                cell.configureCell(social: social, img: img)
+            /*if let img = UsersVC.imageCache.object(forKey: userList.imgUrl as NSString){
+                cell.configureCell(users: Users, img: img)
             }
             else{
-                cell.configureCell(user: user)
+                cell.configureCell(users: users)
             }*/
             print("User cell")
             return cell
