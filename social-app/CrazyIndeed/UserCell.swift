@@ -51,7 +51,7 @@ class UserCell: UITableViewCell {
                             if let img = UIImage(data:imgData){
                                 self.userImage.image = img
                                 //put images into cache so they don't have to be redownloaded when table view is moved up and down
-                                //socialVC.imageCache.setObject(img, forKey: social.imgUrl as NSString)
+                                UsersVC.imageCache.setObject(img, forKey: users.imgUrl as NSString)
                             }
                         }
                     }

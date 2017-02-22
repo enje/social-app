@@ -68,4 +68,22 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return UserCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let _ = tableView.cellForRow(at: indexPath as IndexPath) {
+            self.performSegue(withIdentifier: "toUserInformation", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toUserInformation"{
+            if let destination = segue.destination as? ProfileVC{
+                let path = users.indexPathForSelectedRow
+                let user = userList[path!.row]
+                
+                destination.friendProfile = true
+                destination.userID = user.key
+            }
+        }
+    }
 }

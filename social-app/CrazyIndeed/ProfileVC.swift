@@ -21,11 +21,26 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var ageLab: UILabel!
     @IBOutlet weak var locationLab: UILabel!
     
+    //only used if user segues from list of users
+    
+    @IBOutlet weak var backToUsers: UIButton!
+    
+    //boolean value to inform whether or not information is for own profile or friend's profile
+    var friendProfile = false
+    
     //Lets get User Data by getting uid
-    let userID = FIRAuth.auth()?.currentUser?.uid
+    var userID: String!//= FIRAuth.auth()?.currentUser?.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !friendProfile{
+            userID = FIRAuth.auth()?.currentUser?.uid
+            backToUsers.isHidden = true
+        }
+        else{
+            backToUsers.isHidden = false
+        }
         
         //Get the correct table for userID. snapshot is the who table object. It can be treated as a dictionary object
         
@@ -99,4 +114,11 @@ class ProfileVC: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
+    @IBAction func backToUsersPressed(_ sender: Any) {
+        if friendProfile{
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
