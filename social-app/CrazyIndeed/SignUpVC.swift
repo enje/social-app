@@ -56,7 +56,7 @@ class SignUpVC: UIViewController {
                     print("Successfully created user")
                     //make dictionary with fields for a user table with the generated user object
                     if let user = user{
-                        let userData = ["provider": user.providerID, "username": "", "email": user.email, "age": "", "location": "", "about": "", "imageURL": "", "status": "active", "sex": "", "newUser": "yes"]
+                        let userData = ["provider": user.providerID, "username": "", "email": user.email, "age": "", "location": "", "about": "", "imageUrl": "", "status": "active", "sex": "", "newUser": "yes"]
                         
                         DataService.ds.createFirebaseUser(user.uid, userData: userData as! Dictionary<String, String>)
                     }

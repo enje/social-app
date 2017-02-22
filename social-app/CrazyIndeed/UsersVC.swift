@@ -53,13 +53,14 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let user = userList[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell{
-            /*if let img = UsersVC.imageCache.object(forKey: userList.imgUrl as NSString){
-                cell.configureCell(users: Users, img: img)
+            if let img = UsersVC.imageCache.object(forKey: user.imgUrl as NSString){
+                cell.configureCell(users: user, img: img)
             }
             else{
-                cell.configureCell(users: users)
-            }*/
+                cell.configureCell(users: user)
+            }
             print("User cell")
             return cell
         }

@@ -28,22 +28,17 @@ class UserCell: UITableViewCell {
         self.Users = users
         
         //get database information
-        let userID = FIRAuth.auth()?.currentUser?.uid
+        //let userID = FIRAuth.auth()?.currentUser?.uid
         
-        self.usernameLab.text = users.username
-        print("Username" + users.username)
-        /*self.socialDescription.text = social.description
-        self.socialCat.text = "Category: \(social.category)"
-        
-        let likecount = String(social.likes)
-        self.socialLikeCount.text = "\(likecount) Likes"
+        self.usernameLab.text = "Username: " + users.username
+        self.aboutLab.text = "About: " + users.about
  
         
         if img != nil{
-            self.socialImg.image = img
+            self.userImage.image = img
         }
         else{
-            let imgUrl = social.imgUrl
+            let imgUrl = users.imgUrl
             if imgUrl != ""{
                 let ref = FIRStorage.storage().reference(forURL: imgUrl)
                 ref.data(withMaxSize: 2*1024*1024, completion: { (data, error) in
@@ -54,7 +49,7 @@ class UserCell: UITableViewCell {
                         print("Image download worked!")
                         if let imgData = data{
                             if let img = UIImage(data:imgData){
-                                self.socialImg.image = img
+                                self.userImage.image = img
                                 //put images into cache so they don't have to be redownloaded when table view is moved up and down
                                 //socialVC.imageCache.setObject(img, forKey: social.imgUrl as NSString)
                             }
@@ -63,9 +58,9 @@ class UserCell: UITableViewCell {
                 })
             }
             else{
-                self.socialImg.isHidden = true
+                self.userImage.image = UIImage(named: "default-user-image")
             }
-        }*/
+        }
     }
 
 

@@ -57,7 +57,7 @@ class Users{
             }
             
         }
-        self._userRef = DataService.ds.REF_SOCIALS.child(self._key)
+        self._userRef = DataService.ds.REF_USERS.child(self._key)
     }
     
     
