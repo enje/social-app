@@ -1,0 +1,6 @@
+framework module Pods_CrazyIndeed {
+  umbrella header "Pods-CrazyIndeed-umbrella.h"
+
+  export *
+  module * { export * }
+}
