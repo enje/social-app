@@ -19,7 +19,18 @@ class Users{
     private var _userRef: FIRDatabaseReference!
     
     var username: String{
-        return _username
+        if let nameTemp = _username as String!{
+            if nameTemp != nil {
+                return nameTemp
+            }
+            else{
+                return ""
+            }
+            
+        }
+        else{
+            return ""
+        }
     }
     
     var key: String{
@@ -27,11 +38,33 @@ class Users{
     }
     
     var about: String{
-        return _about
+        if let aboutTemp = _about as String!{
+            if aboutTemp != nil {
+                return aboutTemp
+            }
+            else{
+                return ""
+            }
+            
+        }
+        else{
+            return ""
+        }
     }
     
     var imgUrl: String{
-        return _imgUrl
+        if let imgTemp = _imgUrl as String!{
+            if imgTemp != nil {
+                return imgTemp
+            }
+            else{
+                return ""
+            }
+            
+        }
+        else{
+            return ""
+        }
     }
     
     init(username:String, imgUrl:String, about: String){

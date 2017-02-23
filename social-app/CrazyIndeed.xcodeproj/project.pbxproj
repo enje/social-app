@@ -14,7 +14,7 @@
 		C9296C6E1E4BED520049716A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9296C6D1E4BED520049716A /* Assets.xcassets */; };
 		C9296C711E4BED520049716A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9296C6F1E4BED520049716A /* LaunchScreen.storyboard */; };
 		C9296C7C1E4BF1BD0049716A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9296C7B1E4BF1BD0049716A /* CardView.swift */; };
-		C9296C7E1E4BF7480049716A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9296C7D1E4BF7480049716A /* GoogleService-Info.plist */; };
+		C93A8D2A1E5EABA0006235AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93A8D291E5EABA0006235AF /* GoogleService-Info.plist */; };
 		C95EA41C1E4D3D2600E3FC78 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95EA41B1E4D3D2600E3FC78 /* DataService.swift */; };
 		C95EA41F1E4D45FE00E3FC78 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95EA41E1E4D45FE00E3FC78 /* SignUpVC.swift */; };
 		C99959CD1E5289730047CB8E /* CreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99959CC1E5289730047CB8E /* CreatePost.swift */; };
@@ -42,7 +42,7 @@
 		C9296C701E4BED520049716A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9296C721E4BED520049716A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9296C7B1E4BF1BD0049716A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		C9296C7D1E4BF7480049716A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C93A8D291E5EABA0006235AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C95EA41B1E4D3D2600E3FC78 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C95EA41E1E4D45FE00E3FC78 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		C99959CC1E5289730047CB8E /* CreatePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePost.swift; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 				C9296C6A1E4BED520049716A /* Main.storyboard */,
 				C9296C6D1E4BED520049716A /* Assets.xcassets */,
 				C9296C6F1E4BED520049716A /* LaunchScreen.storyboard */,
+				C93A8D291E5EABA0006235AF /* GoogleService-Info.plist */,
 				C9296C721E4BED520049716A /* Info.plist */,
-				C9296C7D1E4BF7480049716A /* GoogleService-Info.plist */,
 			);
 			path = CrazyIndeed;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9296C711E4BED520049716A /* LaunchScreen.storyboard in Resources */,
-				C9296C7E1E4BF7480049716A /* GoogleService-Info.plist in Resources */,
+				C93A8D2A1E5EABA0006235AF /* GoogleService-Info.plist in Resources */,
 				C9296C6E1E4BED520049716A /* Assets.xcassets in Resources */,
 				C9296C6C1E4BED520049716A /* Main.storyboard in Resources */,
 			);
@@ -430,7 +430,7 @@
 				DEVELOPMENT_TEAM = SBWT3JF724;
 				INFOPLIST_FILE = CrazyIndeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gabeAron.CrazyIndeed;
+				PRODUCT_BUNDLE_IDENTIFIER = swiftTeam.candidateBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -444,7 +444,7 @@
 				DEVELOPMENT_TEAM = SBWT3JF724;
 				INFOPLIST_FILE = CrazyIndeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gabeAron.CrazyIndeed;
+				PRODUCT_BUNDLE_IDENTIFIER = swiftTeam.candidateBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
