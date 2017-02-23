@@ -668,10 +668,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999999999999996" contentMode="scaleToFill" misplaced="YES" editable="NO" text="About you" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KJH-9T-lBX">
-                                <rect key="frame" x="16" y="215" width="343" height="142"/>
+                                <rect key="frame" x="16" y="215" width="343" height="239"/>
                                 <color key="backgroundColor" red="0.79952217699999995" green="0.84992525060000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="NCu-af-PCb"/>
+                                    <constraint firstAttribute="height" constant="239" id="NCu-af-PCb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
