@@ -19,6 +19,8 @@ class DataService {
     private var _REF_BASE = FIRDatabase.database().reference()  //the root of the database
     private var _REF_SOCIALS = FIRDatabase.database().reference().child("Socials")
     private var _REF_USERS = FIRDatabase.database().reference().child("Usesrs") //list of users
+    private var _REF_QUESTIONS = FIRDatabase.database().reference().child("Questions") //list of profile questions
+    private var _REF_ANSWERS = FIRDatabase.database().reference().child("Answers") //each answer has one question and one user
     
     //storage reference
     private var _REF_SOCIAL_PICS = FIRStorage.storage().reference().child("socialPics")
@@ -35,6 +37,14 @@ class DataService {
     
     var REF_USERS: FIRDatabaseReference{
         return _REF_USERS
+    }
+    
+    var REF_QUESTIONS: FIRDatabaseReference{
+        return _REF_QUESTIONS
+    }
+    
+    var REF_ANSWERS: FIRDatabaseReference{
+        return _REF_ANSWERS
     }
     
     var REF_SOCIAL_PICS: FIRStorageReference{

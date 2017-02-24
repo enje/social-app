@@ -15,6 +15,8 @@
 		C9296C711E4BED520049716A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9296C6F1E4BED520049716A /* LaunchScreen.storyboard */; };
 		C9296C7C1E4BF1BD0049716A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9296C7B1E4BF1BD0049716A /* CardView.swift */; };
 		C93A8D2A1E5EABA0006235AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93A8D291E5EABA0006235AF /* GoogleService-Info.plist */; };
+		C93FE8611E5FC0F30025E1C2 /* SignupQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FE8601E5FC0F30025E1C2 /* SignupQuestionsVC.swift */; };
+		C93FE8631E5FC3400025E1C2 /* QuestionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FE8621E5FC3400025E1C2 /* QuestionPage.swift */; };
 		C95EA41C1E4D3D2600E3FC78 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95EA41B1E4D3D2600E3FC78 /* DataService.swift */; };
 		C95EA41F1E4D45FE00E3FC78 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95EA41E1E4D45FE00E3FC78 /* SignUpVC.swift */; };
 		C99959CD1E5289730047CB8E /* CreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99959CC1E5289730047CB8E /* CreatePost.swift */; };
@@ -43,6 +45,8 @@
 		C9296C721E4BED520049716A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9296C7B1E4BF1BD0049716A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C93A8D291E5EABA0006235AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C93FE8601E5FC0F30025E1C2 /* SignupQuestionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupQuestionsVC.swift; sourceTree = "<group>"; };
+		C93FE8621E5FC3400025E1C2 /* QuestionPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
 		C95EA41B1E4D3D2600E3FC78 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C95EA41E1E4D45FE00E3FC78 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		C99959CC1E5289730047CB8E /* CreatePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePost.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				C9ED8C731E5529120049F2C9 /* LandingVC.swift */,
 				C9D765A01E57D18E00DB61E4 /* UsersVC.swift */,
 				C9D765A21E57D3D400DB61E4 /* CommentsVC.swift */,
+				C93FE8601E5FC0F30025E1C2 /* SignupQuestionsVC.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				C9296C7B1E4BF1BD0049716A /* CardView.swift */,
 				C9ED8C771E5535900049F2C9 /* SocialCell.swift */,
 				C9AB3A341E5BCCD600E858B4 /* UserCell.swift */,
+				C93FE8621E5FC3400025E1C2 /* QuestionPage.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -294,12 +300,14 @@
 				C9296C691E4BED510049716A /* SignInVC.swift in Sources */,
 				C9296C7C1E4BF1BD0049716A /* CardView.swift in Sources */,
 				C9AD9F1A1E4EA3D6001E0BE7 /* ProfileVC.swift in Sources */,
+				C93FE8631E5FC3400025E1C2 /* QuestionPage.swift in Sources */,
 				C9296C671E4BED510049716A /* AppDelegate.swift in Sources */,
 				C95EA41F1E4D45FE00E3FC78 /* SignUpVC.swift in Sources */,
 				C9ED8C781E5535900049F2C9 /* SocialCell.swift in Sources */,
 				C9ED8C761E552CD60049F2C9 /* Social.swift in Sources */,
 				C9AB3A371E5BD4E800E858B4 /* Users.swift in Sources */,
 				C9AB3A351E5BCCD600E858B4 /* UserCell.swift in Sources */,
+				C93FE8611E5FC0F30025E1C2 /* SignupQuestionsVC.swift in Sources */,
 				C9ED8C741E5529120049F2C9 /* LandingVC.swift in Sources */,
 				C9D765A11E57D18E00DB61E4 /* UsersVC.swift in Sources */,
 				C99959CD1E5289730047CB8E /* CreatePost.swift in Sources */,

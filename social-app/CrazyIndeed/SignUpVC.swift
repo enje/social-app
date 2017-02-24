@@ -63,7 +63,7 @@ class SignUpVC: UIViewController {
                 }
             })
         }
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancel(_ sender: Any) {
