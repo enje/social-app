@@ -10,12 +10,30 @@ import UIKit
 
 class QuestionPage: UIView {
     
+
+    var QAndA: QAndA!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configureCell(users: Users, img: UIImage? = nil){
+    func configurePage(qanda: QAndA){
+        self.QAndA = qanda
         
+        /*if let questionTemp = self.QAndA.question as String!{
+            if questionTemp  != nil {
+                questionLab.text = questionTemp
+            }
+            else{
+                questionLab.text = ""
+            }
+            
+        }
+        else{
+            questionLab.text = ""
+        }*/
     }
 }

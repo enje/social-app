@@ -933,7 +933,6 @@
                                         <state key="normal" title="Submit"/>
                                         <connections>
                                             <action selector="submit:" destination="5mo-Ql-PMX" eventType="touchUpInside" id="9x3-h8-ziR"/>
-                                            <segue destination="ZTV-TD-Z85" kind="show" id="b3s-ji-8KV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7M-Eu-4gX">
@@ -968,6 +967,7 @@
                         <outlet property="emailF" destination="c9H-qb-K1C" id="B3j-Io-l79"/>
                         <outlet property="passwordF" destination="Nwz-wo-q4Y" id="tQS-Gg-XE3"/>
                         <outlet property="pwVarifyF" destination="K0R-yQ-EpS" id="vh7-L8-4vB"/>
+                        <segue destination="ZTV-TD-Z85" kind="show" identifier="fromSignupToQuestions" id="w0E-32-T2m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dA6-3T-X5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -977,7 +977,7 @@
         <!--Signup QuestionsVC-->
         <scene sceneID="061-53-Bys">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ZTV-TD-Z85" customClass="SignupQuestionsVC" customModule="CrazyIndeed" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="SignupQuestions" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ZTV-TD-Z85" customClass="SignupQuestionsVC" customModule="CrazyIndeed" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="OwW-ZR-4kr" kind="show" identifier="gotoSocialFromQuestions" id="wMT-AP-UcM"/>
                     </connections>
@@ -986,71 +986,23 @@
             </objects>
             <point key="canvasLocation" x="871" y="899"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="HlB-m6-0EN">
+        <!--Question IndividualVC-->
+        <scene sceneID="a9H-An-yS0">
             <objects>
-                <viewController storyboardIdentifier="QOneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ver-em-wgG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dhw-1z-awA" customClass="QuestionIndividualVC" customModule="CrazyIndeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OCe-8S-ye4"/>
-                        <viewControllerLayoutGuide type="bottom" id="7X3-9b-nv7"/>
+                        <viewControllerLayoutGuide type="top" id="KPL-Hf-IVz"/>
+                        <viewControllerLayoutGuide type="bottom" id="dZN-k9-3um"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I1i-I3-N9h" customClass="QuestionPage" customModule="CrazyIndeed" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="ZIc-Dc-ibk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drc-uY-Xhg">
-                                <rect key="frame" x="47" y="336" width="301" height="41"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.79952217699999995" green="0.84992525060000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="drc-uY-Xhg" firstAttribute="leading" secondItem="I1i-I3-N9h" secondAttribute="leadingMargin" constant="10" id="OBV-vu-br5"/>
-                            <constraint firstItem="drc-uY-Xhg" firstAttribute="centerX" secondItem="I1i-I3-N9h" secondAttribute="centerX" id="RdZ-Oz-BL6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="drc-uY-Xhg" secondAttribute="trailing" constant="10" id="eNQ-XM-0BQ"/>
-                            <constraint firstItem="drc-uY-Xhg" firstAttribute="centerY" secondItem="I1i-I3-N9h" secondAttribute="centerY" id="nLx-ew-kn3"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oxL-wo-Kuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nmb-VM-pT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="1563.8680659670167"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="6Oe-T7-k5d">
-            <objects>
-                <viewController storyboardIdentifier="QTwoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bH4-us-zvL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GxJ-HJ-6Do"/>
-                        <viewControllerLayoutGuide type="bottom" id="STt-el-1sH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sac-X9-tWm" customClass="QuestionPage" customModule="CrazyIndeed" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQh-wK-Zn9">
-                                <rect key="frame" x="47" y="336" width="301" height="41"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.1751432171" blue="0.074007075199999994" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="WQh-wK-Zn9" firstAttribute="centerY" secondItem="sac-X9-tWm" secondAttribute="centerY" id="Zi6-09-G2O"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WQh-wK-Zn9" secondAttribute="trailing" constant="10" id="brm-4N-m6l"/>
-                            <constraint firstItem="WQh-wK-Zn9" firstAttribute="leading" secondItem="sac-X9-tWm" secondAttribute="leadingMargin" constant="10" id="cJG-Ta-8Lq"/>
-                            <constraint firstItem="WQh-wK-Zn9" firstAttribute="centerX" secondItem="sac-X9-tWm" secondAttribute="centerX" id="pbK-W0-KfF"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bhQ-OE-ouc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1551" y="1564"/>
+            <point key="canvasLocation" x="869.60000000000002" y="1586.3568215892055"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r8E-yr-bOd">
@@ -1069,39 +1021,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcd-vN-FvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="951" y="139"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="r77-oE-GpG">
-            <objects>
-                <viewController storyboardIdentifier="QThreeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0le-eQ-49j" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hSj-Eh-jfW"/>
-                        <viewControllerLayoutGuide type="bottom" id="AzN-6t-gZF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KB2-Dg-mBe" customClass="QuestionPage" customModule="CrazyIndeed" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ks-El-6ux">
-                                <rect key="frame" x="47" y="336" width="301" height="41"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.94728967760000005" green="1" blue="0.64728134130000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="7ks-El-6ux" secondAttribute="trailing" constant="10" id="5u5-iw-0bo"/>
-                            <constraint firstItem="7ks-El-6ux" firstAttribute="leading" secondItem="KB2-Dg-mBe" secondAttribute="leadingMargin" constant="10" id="EvR-NU-r7P"/>
-                            <constraint firstItem="7ks-El-6ux" firstAttribute="centerY" secondItem="KB2-Dg-mBe" secondAttribute="centerY" id="PA2-Gl-rJ0"/>
-                            <constraint firstItem="7ks-El-6ux" firstAttribute="centerX" secondItem="KB2-Dg-mBe" secondAttribute="centerX" id="ViK-nH-Vmp"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ylY-aa-e9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2223" y="1564"/>
         </scene>
     </scenes>
     <resources>

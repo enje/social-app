@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class SignupQuestionsVC: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    
+    var questionPage = QuestionPage()
 
+    var qAndaList = [QAndA]()    //lists questions
+    
+    var tempArr = [UIViewController]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
         self.dataSource = self
+        
+        print("I have a question..." + String(describing: qAndaList))
+        
+        for i: Int in 0 ..< qAndaList.count{
+            tempArr.append(self.newQuestionViewController(number: i))
+        }
         
         //load first vc
         if let firstViewController = orderedViewControllers.first {
@@ -23,6 +40,10 @@ class SignupQuestionsVC: UIPageViewController, UIPageViewControllerDelegate, UIP
                                animated: true,
                                completion: nil)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    
     }
     
     //go down
@@ -73,14 +94,15 @@ class SignupQuestionsVC: UIPageViewController, UIPageViewControllerDelegate, UIP
     
     //make array of view controllers for page view
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newQuestionViewController(number: "QOne"),
-                self.newQuestionViewController(number: "QTwo"),
-                self.newQuestionViewController(number: "QThree")]
+        return self.tempArr
     }()
     
     //creates the view controller
-    private func newQuestionViewController(number: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(number)ViewController")
+    private func newQuestionViewController(number: Int) -> QuestionIndividualVC/*UIViewController*/ {
+        let questionView = UIStoryboard(name: "Main", bundle: nil) .
+            instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionIndividualVC
+        questionView.configureQuestion(qanda: qAndaList[number])
+        return questionView
     }
+    
 }
